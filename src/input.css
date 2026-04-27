@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@source "../**/*.php";
 @theme {
   --color-primary: #96B3BF;
   --color-dark: #121843;

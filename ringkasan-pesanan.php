@@ -38,16 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $loggedIn) {
 <body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen">
 
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 glass-effect">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <a href="index.php" class="flex items-center gap-2 group">
-          <div class="w-10 h-10 bg-dark text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md">W</div>
-          <span class="text-2xl font-bold text-dark tracking-tight">Work<span class="text-accent">Lance</span></span>
-        </a>
-      </div>
-    </div>
-  </nav>
+  <?php $currentPage = 'ringkasan-pesanan'; require_once __DIR__ . '/components/navbar.php'; ?>
 
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Breadcrumb -->

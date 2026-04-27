@@ -61,20 +61,8 @@ $currentPage = 'manajemen';
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen">
 
-  <nav class="sticky top-0 z-50 glass-effect">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <a href="../index.php" class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-dark text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md">W</div>
-          <span class="text-2xl font-bold text-dark tracking-tight">Work<span class="text-accent">Lance</span></span>
-        </a>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-primary/20 text-primary rounded-full flex items-center justify-center font-bold"><?= getInitials($userName) ?></div>
-          <span class="text-sm font-bold text-dark hidden sm:block"><?= htmlspecialchars($userName) ?></span>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <!-- Navbar -->
+  <?php require_once __DIR__ . '/../components/navbar.php'; ?>
 
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <h1 class="text-3xl font-bold text-dark mb-2">Pengaturan Akun</h1>

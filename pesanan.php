@@ -73,26 +73,7 @@ $pesananList = $stmtPesan->fetchAll();
 <body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
 
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 glass-effect">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <a href="index.php" class="flex items-center gap-2 group">
-          <div class="w-10 h-10 bg-dark text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">W</div>
-          <span class="text-2xl font-bold text-dark tracking-tight">Work<span class="text-accent">Lance</span></span>
-        </a>
-        <div class="flex items-center gap-3">
-          <a href="kelola-jasa.php" class="px-4 py-2 text-sm font-bold text-gray-500 hover:text-dark transition-colors mr-2">Kelola Jasa</a>
-          <a href="pesanan.php" class="px-5 py-2.5 bg-accent/10 border border-accent/20 text-accent rounded-full text-sm font-bold transition-colors">Pesanan Masuk</a>
-          
-          <div class="w-10 h-10 bg-primary/20 text-primary rounded-full flex items-center justify-center font-bold relative ml-4">
-            <?= getInitials($userName) ?>
-            <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
-          </div>
-          <a href="logout.php" class="px-4 py-2 text-sm font-bold text-red-500 hover:bg-red-50 rounded-full transition-colors hidden sm:block">Logout</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <?php $currentPage = 'pesanan'; require_once __DIR__ . '/components/navbar.php'; ?>
 
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
     <!-- Header -->

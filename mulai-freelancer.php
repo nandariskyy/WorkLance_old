@@ -11,52 +11,13 @@ $userRole = $_SESSION['user_role'] ?? 0;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jadi Freelancer | WorkLance</title>
   <meta name="description" content="Mulai karir freelancer Anda di WorkLance. Ubah keahlian menjadi penghasilan, tanpa biaya langganan." />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/WorkLance/src/output.css">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden">
 
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 glass-effect bg-white/80 backdrop-blur-md border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <a href="index.php" class="flex items-center gap-2 group">
-          <div class="w-10 h-10 bg-dark text-white rounded-xl flex items-center justify-center font-bold text-xl group-hover:scale-105 transition-transform duration-300 shadow-md">W</div>
-          <span class="text-2xl font-bold text-dark tracking-tight">Work<span class="text-accent">Lance</span></span>
-        </a>
-        <div class="hidden md:flex items-center gap-3">
-          <?php if ($loggedIn): ?>
-          <div class="relative" id="userMenuWrap">
-            <button onclick="document.getElementById('userDropdown').classList.toggle('hidden')" class="flex items-center gap-3 cursor-pointer">
-              <div class="w-10 h-10 bg-primary/20 text-primary rounded-full flex items-center justify-center font-bold relative">
-                <?= getInitials($userName) ?>
-                <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
-              </div>
-              <span class="text-sm font-bold text-dark"><?= htmlspecialchars($userName) ?></span>
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div id="userDropdown" class="hidden absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
-              <a href="pengaturan-akun/informasi-akun.php" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 font-medium">
-                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                Pengaturan Akun
-              </a>
-              <div class="border-t border-gray-100 my-1"></div>
-              <a href="logout.php" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                Logout
-              </a>
-            </div>
-          </div>
-          <?php else: ?>
-          <a href="login.php" class="text-gray-600 font-medium hover:text-dark transition-colors">Masuk</a>
-          <a href="register.php" class="bg-accent hover:bg-orange-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Daftar</a>
-          <?php endif; ?>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <?php $currentPage = 'mulai-freelancer'; require_once __DIR__ . '/components/navbar.php'; ?>
 
   <!-- Hero Section -->
   <section class="relative pt-20 pb-24 overflow-hidden bg-dark text-white">

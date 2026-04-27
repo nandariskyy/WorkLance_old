@@ -90,20 +90,7 @@ $desaList = $pdo->query("SELECT * FROM desa ORDER BY nama_desa")->fetchAll();
 <body class="bg-gray-50 min-h-screen font-sans flex flex-col antialiased">
 
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <a href="index.php" class="flex items-center gap-2 group">
-          <div class="w-10 h-10 bg-dark text-white rounded-xl flex items-center justify-center font-bold text-xl">W</div>
-          <span class="text-2xl font-bold text-dark tracking-tight">Work<span class="text-accent">Lance</span></span>
-        </a>
-        <div class="flex items-center gap-3">
-          <span class="text-sm font-medium text-gray-500 hidden sm:block">Pendaftaran Freelancer</span>
-          <div class="w-10 h-10 bg-primary/20 text-primary rounded-full flex items-center justify-center font-bold"><?= getInitials($userName) ?></div>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <?php $currentPage = 'daftar-freelancer'; require_once __DIR__ . '/components/navbar.php'; ?>
 
   <!-- Form -->
   <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8">
