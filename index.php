@@ -11,7 +11,7 @@ foreach ($jasaList as $j) {
     $jasaPerKategori[$j['id_kategori']][] = $j;
 }
 
-// Freelancer Unggulan (LIMIT 4, with avg rating)
+// Freelancer Unggulan (LIMIT 4)
 $freelancerUnggulan = $pdo->query("
     SELECT l.id_layanan, l.tarif, l.deskripsi,
            p.id_pengguna, p.nama_pengguna, p.alamat_lengkap,
@@ -79,9 +79,7 @@ $userName = $_SESSION['user_nama'] ?? '';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WorkLance - Temukan Freelancer Lokal Terbaik</title>
   <meta name="description" content="WorkLance adalah platform marketplace freelancer lokal. Temukan tenaga profesional terbaik di sekitarmu dengan mudah, cepat, dan transparan." />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/WorkLance/src/output.css">
 </head>
 
@@ -141,13 +139,6 @@ $userName = $_SESSION['user_nama'] ?? '';
           <a href="register.php" class="px-7 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-dark to-[#1d2666] rounded-full shadow-lg shadow-dark/20 hover:shadow-xl hover:shadow-dark/30 transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark">Daftar</a>
           <?php endif; ?>
         </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="md:hidden text-gray-600 hover:text-dark">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
       </div>
     </div>
   </nav>

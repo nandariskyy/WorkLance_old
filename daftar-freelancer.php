@@ -84,9 +84,7 @@ $desaList = $pdo->query("SELECT * FROM desa ORDER BY nama_desa")->fetchAll();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pendaftaran Freelancer | WorkLance</title>
   <meta name="description" content="Daftar sebagai freelancer di WorkLance. Lengkapi data dirimu dan ajukan pendaftaran." />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/WorkLance/src/output.css">
 </head>
 <body class="bg-gray-50 min-h-screen font-sans flex flex-col antialiased">
